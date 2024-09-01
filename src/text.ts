@@ -20,7 +20,7 @@ class UnitTokenizer implements Tokenizer {
 class MarkdownTokenizer implements Tokenizer {
 
   private isNonWord(token: string): boolean {
-    const NON_WORDS = /^\W+$/;
+    const NON_WORDS = /^[^\wа-яА-ЯёЁ]+$/;
     return !!NON_WORDS.exec(token);
   }
 
